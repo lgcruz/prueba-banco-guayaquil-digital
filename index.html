@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Widget Driver</title>
+    <title>tracklink</title>
     <style>
       html,
       body {
@@ -29,178 +29,25 @@
     </style>
   </head>
   <body>
-    <script src="https://s3.us-west-2.amazonaws.com/cdn.devlabs.tech/document/f809fef4-dfed-448f-8c49-c7b8350caaf6-library.js"></script>
+    <div style="width: 100%;height: 100%; display:flex; justify-content:center; align-items:center;">
+      <button 
+        onclick="setFlowParams()"
+        style="background-color: rgb(64, 192, 240); border-radius:10px; border-width:0; color:white; padding:10px; font-size:large">
+        Seleccionar Chevrolet Beat
+      </button>
+    </div>
+
+    <script src="https://s3.us-west-2.amazonaws.com/cdn.devlabs.tech/document/8e6b998c-a4d9-4456-9fd1-ebbcfc493dfc-library.js"></script>
     <script>
-      // apikey123456789 luigi
-      // YjQ0ZTEyYTEtNjY1ZS00MWQ2LTk3NmItNjMxMzg2MWYzMDdl empty
-      // apikey-austro
-      
-      // group api key 
-      // 'YzlhZTkyMzItMGQ5OS00MTJkLWIyZDctYWZhMzVkNThiZDA3' 
-      // normal and normal api keys
-      // 'ZTRhM2Q3ZDQtYmEyMy00YzRjLTgwNzYtNWEwMGEwOWMyOGJi' // 'MTVlN2E0MmMtYzExYS00Mzk3LWI1ZGEtMjAyZGRiNjM3ZjBh' // 
-      // alexander api keys
-      // 'ZmJiZGE2YWItMmYzZC00Mjg1LTgyZGEtYzBkYjg1Mjk1MjJm' group
-      // 'NGMwNDQyNmEtMjcxMy00MjZkLTlhODYtZTY4MWU2NWE4ZWIx' single
-      // YTYwODc3YzAtOTc2ZC00MWQ0LTgxYzEtNzM3Mjg0YWM5ZWNl datafast
-      // MTJiOGY3MjAtNGJkZC00ZDUwLWE5N2ItMTQ1MjY0OGI3Yjc5 austro
-      // ZTUyMjM1ZGYtNDI1Mi00OWFkLWFlODUtYTMwMTk3YjI1YjU0 furoiani
-      // YzIzMzQxNTctNGJhMS00M2U4LWI1YWYtZWI2NTAwYTZiOGY0 super easy
-      // NjgwNGVjNTYtZjYzMC00NGI2LWI4OTktYzFlMWFmOTQ2ZTNi oscus
-      // OGNjNWE5MTAtMWVkNS00ZDc3LWFjY2ItZDc1Y2M2ODcyMjY0 sika
-      // NDM1NjhhMDgtYzkwNy00MGUyLTg2YTYtZTA1NjIwMGNhMWI0 luzverde
-      // YjBjYjY2OTQtZjQ4ZS00NzE0LTk1MmQtZjk4NWJhMWMwNTY2 farma mia app
-      // MzA1NmI0NzktZDJhNC00MWVhLThlZmQtMWYwN2E0NzE0Nzg5 el bosque
-      // ODNlZTc3NDUtMjIwNy00NWU2LThiYjMtZTAwN2MwNDVjOTAw peigo
-      // ZWIwYTQ3NzgtZGFhYi00ODE2LWI1N2YtMDFhMTUyZTZmOTg1 farma mia web
-      // MjI1NDk5MTEtZjYwMS00OWY0LTg1OTYtNzI1ZDMyOTFhYTc1 banco del pacifico
-      // Yzc4NDBlNmUtZGViNi00ZmVhLTk1ODQtNDYwODkyYzY3NzRh interagua web
-      // MjBjY2ZjOGEtN2M1OC00NzgwLTg3YWYtMWVjNDg3NWI2MDk4 interagua app
-      // ZjJiYzYwOWMtZjg5NC00ODZlLWJmZDAtMzU0ZGFhMGMxN2Y2 interagua kiosko
-      // NTE0ZDcwMzYtNDRmNC00YTY0LTlkOGItNThhNzQ3NGI3ODJm banco guayaquil
-      // YzA0ODhjNDQtY2Q0NC00ZmNkLTk3NzAtNTUyNTNhMDQzZTQx tracklink
-      // MWE1MWI2MjYtOWJhYS00ODBkLWEwZDctMTY0ZTJiMzg3OGMw cerveceria nacional
-      // NjIxYTk4NTUtMDFlMi00ZWI2LWI3MzctY2YyM2ZmMDczYjUx tempo design
-      // ZmI3MzI3YzctNmYzZC00NzVkLThlNDctZjlmOWJlMTczOTgx group testing
-      // N2JhMTM3MzEtZDI3MS00NjFhLTg4N2YtY2FkY2JkNjIyNWJj jelou demo
-      // Y2M0OTUyMzMtMjFlMS00ODE3LWI1ZDctYmEyZGIxNWYyOGQz driver test 
-      // ODgyODJjMjktZjc1ZC00YjY4LThhMGUtODgyYzhkN2I4NWY4 group pma test MjgwMDhmNTMtNmI4OS00MTVhLWIwNzEtOWMzNDZhMDYyMjMy
       const widgetService = new WidgetService({
         apiKey: 'OWY0MzM2YWEtNjc5Ny00YzYxLTg5MDgtYTUxMDdjOGNjYTc0',
-        topMenu: {
-          options: []
-        },
-        properties: {
-          // type: 'normal',
-        }
       });
       
-      // 1ab28643-875e-4be0-84db-be78262c330f alexander-8 driver:305758-test operator:1149 driver:317119
-      widgetService.connect({
-        // id: 'driver:305758-test',
-        // names: "Driver-4"
-        // name: "Ed Sheeran"
-        // name: "Shipper 3",// id: 'driver:305758-test', // operator:123 driver:370429
-        // name: 'alexander',
-        // useGroupRoom: true
-        // optoken: 'luis@shippify.co' // '9269df3a-cdda-473c-ac3b-5411be5442c8'
-      }).then((instance) => {
-        widgetService.setContactsForRoom([
-          {
-            id: "shipper-4",
-            names: "Shipper 4"
-          },
-          {
-            id: "shipper-5",
-            names: "Shipper 5"
-          },
-          {
-            id: "shipper-6",
-            names: "Shipper 6"
-          },
-          {
-            id: "shipper-7",
-            names: "Shipper 7"
-          },
-          {
-            id: "shipper-8",
-            names: "Shipper 8"
-          },
-          {
-            id: "shipper-1",
-            names: "Shipper 1"
-          },
-          {
-            id: "shipper-2",
-            names: "Shipper 2"
-          },
-        ]);
-
-        widgetService.on('search', query => {
-          console.log("query", query);
-          
-          if (query && query.length >= 3) {
-            widgetService.startLoading();
-            widgetService.setContacts([
-              // {
-              //   id: "762245f0-3f55-48b7-9c33-1112906177dd",
-              //   names: "Conductor",
-              //   color: "red",
-              // },
-              {
-                id: "Driver-1",
-                names: "Driver-1"
-              },
-              {
-                id: "Driver-2",
-                names: "Driver-2"
-              },
-              {
-                id: "Driver-3",
-                names: "Driver-3"
-              },
-              {
-                id: "Driver-4",
-                names: "Driver-4"
-              },
-              {
-                id: "Driver-5",
-                names: "Driver-5"
-              },
-            ]);
-            setTimeout(() => {
-              widgetService.stopLoading();
-
-            }, 1000);
-          }
-        });
-        widgetService.on('searchForRoom', query => {
-          console.log("query", query);
-          if (query && query.length >= 3) {
-            widgetService.startLoadingForRoom();
-            widgetService.setContactsForRoom([
-              {
-                id: "shipper-4",
-                names: "Shipper 4"
-              },
-              {
-                id: "shipper-5",
-                names: "Shipper 5"
-              },
-              {
-                id: "shipper-6",
-                names: "Shipper 6"
-              },
-              {
-                id: "shipper-1",
-                names: "Shipper 1"
-              },
-              {
-                id: "shipper-2",
-                names: "Shipper 2"
-              },
-              {
-                id: "operator:123",
-                names: "alexander"
-              },
-              {
-                id: "shipper-7",
-                names: "Shipper 7"
-              },
-              {
-                id: "shipper-8",
-                names: "Shipper 8"
-              },
-            ]);
-            setTimeout(() => {
-              widgetService.stopLoadingForRoom();
-            }, 1000);
-          }
-          setTimeout(() => {
-            widgetService.on('stopLoading');
-          }, 10000);
-        });
-      });
+      widgetService.connect({}).then((instance) => {});
+      window.widgetService = widgetService;
+      function setFlowParams() {
+        widgetService.setFlow(22992, {VehiculoCliente: "ChevroletBeat"});
+      }
     </script>
   </body>
 </html>
