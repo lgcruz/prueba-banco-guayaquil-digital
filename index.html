@@ -46,6 +46,7 @@
       widgetService.connect({}).then((instance) => {});
       window.widgetService = widgetService;
       function setFlowParams() {
+        widgetService.open();
         widgetService.setFlow(22992, {VehiculoCliente: "ChevroletBeat"});
       }
     </script>
